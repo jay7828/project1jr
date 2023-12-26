@@ -5,7 +5,7 @@ const Note = require('./model/Notes');
 
 const mongoose =require("mongoose");
 
-const mongoDBpath="mongodb+srv://jayesh:jayeshsharma@cluster0.8bukqbm.mongodb.net/?retryWrites=true&w=majority"
+const mongoDBpath="mongodb+srv://jayesh:jayeshsharma@cluster0.8bukqbm.mongodb.net/notedb"
 mongoose.connect(mongoDBpath).then(function(){
     const bodyParser =require('body-parser');
     app.use(bodyParser.urlencoded({extended : false}));
@@ -28,8 +28,3 @@ app.listen(PORT,function()
 {
     console.log("server is Running at Port No." + PORT);
 });
-
-
-
-
-
